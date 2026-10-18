@@ -55,7 +55,7 @@ class BatteryService : Service() {
     }
 
     private fun notif(text: String) = NotificationCompat.Builder(this, "bf")
-        .setSmallIcon(android.R.drawable.ic_lock_idle_charge)
+        .setSmallIcon(R.drawable.ic_battery)
         .setContentTitle("BatteryFlow").setContentText(text)
         .setOngoing(true).setSilent(true).setOnlyAlertOnce(true)
         .setContentIntent(PendingIntent.getActivity(this, 0, Intent(this, MainActivity::class.java), PendingIntent.FLAG_IMMUTABLE))
